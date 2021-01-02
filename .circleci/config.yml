@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-size: 2000px 1000px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+</style>
+</head>
+<body style="background-image: url('one.jpg');">
+
+<div style="padding-left:1000px" class="topnav">
+  <a id="home" class="active" href="#home" class="tablink" onclick="openPage('Home', this, 'red')" class="tabcontent">Home</a>
+  <a id="About" href="#about" class="tablink" onclick="openPage('Home', this, 'red')" class="tabcontent">About</a>
+  <a id="Contact" href="#contact" class="tablink" onclick="openPage('Home', this, 'red')" class="tabcontent">Contact</a>
+  <img src="one.jpg" alt="Person"  style= "border-radius: 50px 50px" width="40" height="40">
+  <div class="search-container">
+ 
+  </div>
+</div>
+
+
+<h1> Unsplash </h1>
+<p style= "color: white"> Beautiful, free photos. </p>
+<p style= "color: white"> Gifted by the worlds most generous community of photographers </p>
+
+  
+  
+  <form action="/action_page.php" >
+      <div> <input style= "width: 95%"; "length: 20%" type="text" placeholder="Search.." name="search"> 
+      <button type="submit">Search</button>
+    </div>
+  <div class="search-container">
+
+
+</form>
+  </div>
+</div>
+
+
+<div style="padding-left:16px">
+  
+  <p style= "color: white">Trending searches: business,computer,nature,love,house</p>
+
+</div>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openPhotos(event, 'Trending')">Trending</button>
+  <button class="tablinks" onclick="openPhotos(event, 'New')">New</button>
+  <button class="tablinks" onclick="openPhotos(event, 'Following')">Following</button>
+</div>
+
+<div id="Trending" class="tabcontent" style= "background-color: black"; "scroll-snap-type: x mandatory"; "overflow-x: scroll"; display: flex;  >
+
+<img  onclick="openForm()" id="myImg2" src="three_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="three_img.jpg" alt="nature"  width="400" height="400">
+    <label id="user_input" for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<img  onclick="openForm1()" id="myImg2" src="four_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm1">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="four_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>   
+<button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+  </form>
+</div>
+
+
+<img  onclick="openForm2()" id="myImg2" src="two_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm2">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="two_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>   
+<button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+  </form>
+</div>
+
+<img  onclick="openForm4()" id="myImg2" src="five_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm4">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="five_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm4()">Close</button>
+  </form>
+</div>
+
+</div>
+
+<div id="New" class="tabcontent" style= "background-color: black"; "scroll-snap-type: x mandatory"; "overflow-x: scroll"; display: flex;  >
+
+<img  onclick="openForm5()" id="myImg2" src="three_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm5">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="three_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm5()">Close</button>
+  </form>
+</div>
+
+<img  onclick="openForm6()" id="myImg2" src="four_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm6">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="four_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm6()">Close</button>
+  </form>
+</div>
+
+
+<img  onclick="openForm7()" id="myImg2" src="two_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm7">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="two_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm7()">Close</button>
+  </form>
+</div>
+
+<img  onclick="openForm8()" id="myImg2" src="five_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm8">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="five_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm8()">Close</button>
+  </form>
+</div>
+
+</div>
+
+
+<div id="Following" class="tabcontent" style= "background-color: black"; "scroll-snap-type: x mandatory"; "overflow-x: scroll"; display: flex;  >
+
+<img  onclick="openForm9()" id="myImg2" src="three_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm9">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="three_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm9()">Close</button>
+  </form>
+</div>
+
+<img  onclick="openForm10()" id="myImg2" src="four_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm10">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="four_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm10()">Close</button>
+  </form>
+</div>
+
+
+<img  onclick="openForm11()" id="myImg2" src="two_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm11">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="two_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm11()">Close</button>
+  </form>
+</div>
+
+<img  onclick="openForm12()" id="myImg2" src="five_img.jpg" alt="nature"  width="400" height="400">
+
+<div class="form-popup" id="myForm12">
+  <form action="/action_page.php" class="form-container">  
+<img id="myImg2" src="five_img.jpg" alt="nature"  width="400" height="400">
+    <label for="name"><b>Name</b></label> 
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter Comment" name="cmt" required>
+<button type="submit" class="showInput" >Submit</button>
+   <button type="button" class="btn cancel" onclick="closeForm12()">Close</button>
+  </form>
+</div>
+
+</div>
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function openForm1() {
+  document.getElementById("myForm1").style.display = "block";
+}
+
+function closeForm1() {
+  document.getElementById("myForm1").style.display = "none";
+}
+
+function openForm2() {
+  document.getElementById("myForm2").style.display = "block";
+}
+
+function closeForm2() {
+  document.getElementById("myForm2").style.display = "none";
+}
+
+function openForm4() {
+  document.getElementById("myForm4").style.display = "block";
+}
+
+function closeForm4() {
+  document.getElementById("myForm4").style.display = "none";
+}
+function openForm5() {
+  document.getElementById("myForm5").style.display = "block";
+}
+
+function closeForm5() {
+  document.getElementById("myForm5").style.display = "none";
+}
+function openForm6() {
+  document.getElementById("myForm6").style.display = "block";
+}
+
+function closeForm6() {
+  document.getElementById("myForm6").style.display = "none";
+}
+function openForm7() {
+  document.getElementById("myForm7").style.display = "block";
+}
+
+function closeForm7() {
+  document.getElementById("myForm7").style.display = "none";
+}
+function openForm8() {
+  document.getElementById("myForm8").style.display = "block";
+}
+
+function closeForm8() {
+  document.getElementById("myForm8").style.display = "none";
+}
+function openForm9() {
+  document.getElementById("myForm9").style.display = "block";
+}
+
+function closeForm9() {
+  document.getElementById("myForm9").style.display = "none";
+}
+function openForm10() {
+  document.getElementById("myForm10").style.display = "block";
+}
+
+function closeForm10() {
+  document.getElementById("myForm10").style.display = "none";
+}
+function openForm11() {
+  document.getElementById("myForm11").style.display = "block";
+}
+
+function closeForm11() {
+  document.getElementById("myForm11").style.display = "none";
+}
+function openForm12() {
+  document.getElementById("myForm12").style.display = "block";
+}
+
+function closeForm12() {
+  document.getElementById("myForm12").style.display = "none";
+}
+</script>
+
+
+<script>
+function openPhotos(evt, photos) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(photos).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
